@@ -1,6 +1,8 @@
-var titles = document.getElementsByClassName('title');
+const banner = document.querySelector('#page-banner');
 
+console.log('#page-banner node type is:', banner.nodeType);
+console.log('#page-banner node name is:', banner.nodeName);
+console.log('#page-banner has child nodes:', banner.hasChildNodes());
 
-Array.from(titles).forEach(function(item){
-    console.log(item);
-})
+const clonedBanner = banner.cloneNode(true);
+console.log(clonedBanner);
