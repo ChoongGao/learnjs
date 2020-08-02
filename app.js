@@ -1,5 +1,8 @@
-const bookList = document.querySelector('#book-list');
+const list = document.querySelector('#book-list ul');
 
-console.log('Book-list next sibling is: ', bookList.nextElementSibling);
-console.log('Book-list next sibling is: ', bookList.previousElementSibling);
-bookList.previousElementSibling.querySelector('p').innerHTML += '<br /> TOO COOL';
+list.addEventListener('click', function(e){
+    if (e.target.className == 'delete'){
+        const li = e.target.parentElement;
+        li.parentNode.removeChild(li);
+    }
+});
